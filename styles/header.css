@@ -1,4 +1,8 @@
 .logo-header {
     display:flex;
-    justify-content:center
+    justify-content:center;
+}
+.header{
+    display:flexbox;
+    margin:0 10%;
 }

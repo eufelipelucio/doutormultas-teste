@@ -3,9 +3,11 @@ import React from 'react'
 import Image from 'next/image'
 import Logo from '../../public/logo.webp'
 import Doutor from '../../public/doutor.jpg'
+
 export default function Header() {
   return (
     <>
+    <div className='header'>
         <div className='logo-header' >
               <Image
               src={Logo} 
@@ -15,6 +17,7 @@ export default function Header() {
         <div className='logo-header'>
           <Image src={Doutor} />
         </div>
+    </div>
     </>
   )
 }

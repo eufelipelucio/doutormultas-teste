@@ -1,0 +1,28 @@
+.Card{
+    display:flexbox;
+    margin:0 auto;
+    width:min(80% ,890px);
+    
+}
+.card-items{
+    display:flex;
+    justify-content:space-between;
+    height:300px;
+    overflow:scroll;
+}
+.card-items::-webkit-scrollbar{
+    width:0px
+}
+.list-items button{
+    border:none;
+    background-color:#FFF;
+    font-family:Roboto;
+    font-size:1rem;
+    color:#0f64b1;
+    font-weight:bold;
+    text-shadow: 1px 1px 1px #acacb1;
+}
+.list-items-modelos{
+    font-size:.9rem;
+    color:#0f64b1;
+}

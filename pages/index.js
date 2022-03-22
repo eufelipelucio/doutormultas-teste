@@ -1,5 +1,6 @@
 import Header from "./components/header";
 import Head from 'next/head'
+import Accordion from "./components/accordion";
 
 export default function Home() { 
   return (
@@ -11,6 +12,7 @@ export default function Home() {
             <link rel='shortcut icon' href='https://doutormultas.com.br/wp-content/uploads/2016/11/Untitled-3-1.png'/>
       </Head>
       <Header/>
+      <Accordion/>
     </>
   );
 };
