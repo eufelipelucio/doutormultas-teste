@@ -2,12 +2,12 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import motoApi from '../api/apiMotos'
 
-export default function teste(){
+export default function Motos(){
 
   const {motos} = motoApi();
   const [name,setName] = useState();
   
-  const useModelApi = () => {
+  const ModelApi = () => {
     const [modelos, setModelos] = useState([]);  
     
   useEffect( () => {
@@ -25,7 +25,7 @@ export default function teste(){
   };
   
   };
-  const { modelos } = useModelApi();
+  const { modelos } = ModelApi();
 
   return(
     <>  

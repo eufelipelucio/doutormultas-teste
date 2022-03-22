@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import carApi from '../api/apiCarros'
 
-export default function teste(){
+export default function Carros(){
 
   const {carros} = carApi();
   const [name,setName] = useState();

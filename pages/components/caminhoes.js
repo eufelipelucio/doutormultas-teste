@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react'
 import { useState, useEffect } from 'react';
 import carApi from '../api/apiCaminhoes'
 
-export default function teste(){
+export default function Caminhoes(){
 
   const {caminhoes} = carApi();
   const [name,setName] = useState();
