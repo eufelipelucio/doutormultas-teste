@@ -5,10 +5,10 @@ import carApi from '../api/apiCarros'
 export default function Carros(){
 
   const {carros} = carApi();
-  const [name,setName] = useState();
   
   const useModelApi = () => {
     const [modelos, setModelos] = useState([]);  
+    const [name,setName] = useState();
     
   useEffect( () => {
     async function fetchApi(){

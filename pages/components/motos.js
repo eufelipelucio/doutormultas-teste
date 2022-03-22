@@ -5,10 +5,11 @@ import motoApi from '../api/apiMotos'
 export default function Motos(){
 
   const {motos} = motoApi();
-  const [name,setName] = useState();
   
   const ModelApi = () => {
     const [modelos, setModelos] = useState([]);  
+    const [name,setName] = useState();
+
     
   useEffect( () => {
     async function fetchApi(){

@@ -1,7 +1,7 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState} from 'react';
 
-const carApi = () => {
-    const [carros, setCarros] = useState([]);  
+const useCarApi = () => {
+    const [carros, setCarros] = useState();  
     
 
   useEffect( () => {
@@ -12,7 +12,7 @@ const carApi = () => {
     setCarros(data);
   }
   fetchApi();
-},[]);  
+},[carros]);  
    
 
   return{
@@ -21,4 +21,4 @@ const carApi = () => {
 
 };
 
-export default carApi;
+export default useCarApi;
