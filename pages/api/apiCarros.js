@@ -12,7 +12,7 @@ const useCarApi = () => {
     setCarros(data);
   }
   fetchApi();
-},[carros]);  
+},[]);  
    
 
   return{

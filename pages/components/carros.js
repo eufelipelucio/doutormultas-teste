@@ -1,14 +1,15 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import carApi from '../api/apiCarros'
+import useCarApi from '../api/apiCarros'
 
 export default function Carros(){
 
-  const {carros} = carApi();
+  const {carros} = useCarApi();
+  const [name,setName] = useState();
   
   const useModelApi = () => {
-    const [modelos, setModelos] = useState([]);  
-    const [name,setName] = useState();
+    const [modelos, setModelos] = useState([]);
+    const value = name  
     
   useEffect( () => {
     async function fetchApi(){
@@ -18,7 +19,7 @@ export default function Carros(){
     setModelos(data.modelos);
   }
   fetchApi();
-  },[name]);  
+  },[value]);  
    
   return{
     modelos
@@ -31,7 +32,7 @@ export default function Carros(){
     <>  
       <div className='card-items'>
         <div className='list-items'>
-          {carros.map(index => (
+          {carros?.map(index => (
               <p key={index.codigo}>
                 <button name={index.codigo} onClick={(e) =>{
                   const valor = e.target.name;

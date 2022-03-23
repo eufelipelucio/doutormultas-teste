@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import Image from 'next/image'
 import Logo from '../../public/logo.webp'
@@ -10,12 +9,13 @@ export default function Header() {
     <div className='header'>
         <div className='logo-header' >
               <Image
+              alt='logo'
               src={Logo} 
               width={300} 
               height={75}/>
         </div>
         <div className='logo-header'>
-          <Image src={Doutor} />
+          <Image alt='Doutor' src={Doutor} />
         </div>
     </div>
     </>

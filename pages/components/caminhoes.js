@@ -1,15 +1,16 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import carApi from '../api/apiCaminhoes'
+import useCamiApi from '../api/apiCaminhoes'
 
 export default function Caminhoes(){
 
-  const {caminhoes} = carApi();
+  const {caminhoes} = useCamiApi([]);
+  const [name,setName] = useState([]);        
+
   
   const useModelApi = () => {
     const [modelos, setModelos] = useState([]);  
-    const [name,setName] = useState();        
-
+    const value = name
     
   useEffect( () => {
     async function fetchApi(){
@@ -19,7 +20,7 @@ export default function Caminhoes(){
     setModelos(data.modelos);
   }
   fetchApi();
-  },[name]);  
+  },[value]);  
    
   return{
     modelos
@@ -32,7 +33,7 @@ export default function Caminhoes(){
     <>  
       <div className='card-items'>
         <div className='list-items'>
-          {caminhoes.map(index => (
+          {caminhoes?.map(index => (
             <p key={index.codigo}>
                 <button name={index.codigo} 
                     onClick={(e) =>{

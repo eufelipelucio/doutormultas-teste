@@ -1,8 +1,8 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
 import Carros from './carros';
-import Motos from './motos'
-import Caminhoes from './caminhoes'
+import Motos from './motos';
+import Caminhoes from './caminhoes';
 
 export default function Acordion() {
   return (

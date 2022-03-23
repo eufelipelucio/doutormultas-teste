@@ -1,14 +1,16 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import motoApi from '../api/apiMotos'
+import useMotoApi from '../api/apiMotos'
 
 export default function Motos(){
 
-  const {motos} = motoApi();
+  const {motos} = useMotoApi();
+  const [name,setName] = useState();
+
   
   const ModelApi = () => {
     const [modelos, setModelos] = useState([]);  
-    const [name,setName] = useState();
+    const value = name
 
     
   useEffect( () => {
@@ -19,7 +21,7 @@ export default function Motos(){
     setModelos(data.modelos);
   }
   fetchApi();
-  },[name]);  
+  },[value]);  
    
   return{
     modelos
@@ -32,7 +34,7 @@ export default function Motos(){
     <>  
       <div className='card-items'>
         <div className='list-items'>
-          {motos.map(index => (
+          {motos?.map(index => (
               <p key={index.codigo}>
                 <button name={index.codigo} onClick={(e) =>{
                   const valor = e.target.name;
